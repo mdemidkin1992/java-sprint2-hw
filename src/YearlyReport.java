@@ -3,14 +3,11 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 public class YearlyReport {
 
     ReadFile readFile = new ReadFile();
-    String[] months = {"Январь", "Февраль", "Март"};
-
 
     public ArrayList<YearRowData> addYear() {
         List<String> lines = readFileContents(readFile.readYearFile());
@@ -26,44 +23,6 @@ public class YearlyReport {
         }
         System.out.println("Годовые данные загружены.\n");
         return yearData;
-    }
-
-    public void showYearStats (ArrayList<YearRowData> yearData) {
-
-        if (yearData == null) {
-            System.out.println("Отчеты не были загружены");
-        } else {
-            System.out.println("Рассматриваемый год: 2021");
-            for (int i = 0; i < months.length; i++) {
-                int expense = 0;
-                int income = 0;
-                for (YearRowData line : yearData) {
-                    if ((line.month == (i + 1)) && (line.is_expense)) {
-                        expense = line.amount;
-                    } else if ((line.month == (i + 1)) && (!line.is_expense)) {
-                        income = line.amount;
-                    }
-                }
-                int profit = income - expense;
-                System.out.println("В месяце " + months[i] + " прибыль: " + profit);
-            }
-
-            int sumExpense = 0;
-            int sumIncome = 0;
-            for (YearRowData line : yearData) {
-                if (line.is_expense) {
-                    sumExpense += line.amount;
-                } else {
-                    sumIncome += line.amount;
-                }
-            }
-
-            int averageExpense = sumExpense / months.length;
-            int averageIncome = sumIncome / months.length;
-
-            System.out.println("Средний расход по месяцам: " + averageExpense);
-            System.out.println("Средний доход по месяцам: " + averageIncome);
-        }
     }
 
     List<String> readFileContents(String path) {
