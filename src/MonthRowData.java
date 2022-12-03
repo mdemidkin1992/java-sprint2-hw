@@ -4,8 +4,7 @@ public class MonthRowData {
     boolean is_expense;
     int quantity;
     int sum_of_one;
-    int month;
-    int amount;
+
 
     public MonthRowData(String int_name, boolean is_expense, int quantity, int sum_of_one) {
         this.int_name = int_name;
