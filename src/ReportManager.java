@@ -12,16 +12,13 @@ public class ReportManager {
     ArrayList<YearRowData> yearData = null;
     ArrayList<YearRowData> monthData = null;
 
-    public HashMap<String, ArrayList<MonthRowData>> addMonthData () {
-        return allMonthData = monthlyReport.addMonths();
+    public void addMonthData () {
+        allMonthData = monthlyReport.addMonths();
+        monthData = monthlyReport.changeMonthFormat(allMonthData);
     }
 
-    public ArrayList<YearRowData> changeMonthDataFormat () {
-        return monthData = monthlyReport.changeMonthFormat(allMonthData);
-    }
-
-    public ArrayList<YearRowData> addYearData () {
-        return yearData = yearlyReport.addYear();
+    public void addYearData () {
+        yearData = yearlyReport.addYear();
     }
 
     public void showMonthStats (HashMap<String, ArrayList<MonthRowData>> allMonthData) {

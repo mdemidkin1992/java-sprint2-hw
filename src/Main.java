@@ -10,7 +10,6 @@ public class Main {
             int command = scanner.nextInt();
             if (command == 1) {
                 reportManager.addMonthData();
-                reportManager.changeMonthDataFormat();
             } else if (command == 2) {
                 reportManager.addYearData();
             } else if (command == 3) {
