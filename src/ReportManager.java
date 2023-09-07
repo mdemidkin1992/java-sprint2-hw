@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class ReportManager {
-
     MonthlyReport monthlyReport = new MonthlyReport();
     YearlyReport yearlyReport = new YearlyReport();
     Stats stats = new Stats();

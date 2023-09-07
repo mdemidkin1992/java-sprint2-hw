@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.HashMap;
 
 public class MonthlyReport {
-
     ReadFile readFile = new ReadFile();
     String[] months = {"Январь", "Февраль", "Март"};
 

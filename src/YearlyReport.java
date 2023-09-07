@@ -6,7 +6,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class YearlyReport {
-
     ReadFile readFile = new ReadFile();
 
     public ArrayList<YearRowData> addYear() {
