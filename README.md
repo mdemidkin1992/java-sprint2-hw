@@ -1,11 +1,11 @@
-### Приложение для бухгалтерии
+### Accounting Application
 
-#### Основной фукнционал
-- Считывание данных из месячных и годовых бухгалтерских отчетов из CSV файлов и их перевод в java-объекты 
-- Сверка данных по месячным и годовому отчётам
-- Вывод информации о месячных и годовом отчётах
-- Консольный интерфейс для управления программой
+#### Main Functionality
+- Reading data from monthly and annual financial reports in CSV files and converting them into Java objects
+- Data reconciliation between monthly and annual reports
+- Displaying information about monthly and annual reports
+- Command-line interface for program management
 
-#### Системные требования
+#### System Requirements
 - Java Development Kit (JDK) 11
 ___
